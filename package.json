@@ -15,6 +15,7 @@
     "lint:watch": "chokidar 'bin/*' --initial -c 'shellcheck bin/dot-only-hunter'",
     "start": "npm run lint:watch",
     "pretest": "npm run lint",
+    "test": "sh tests.sh",
     "prepublish": "npm run test"
   },
   "files": [
