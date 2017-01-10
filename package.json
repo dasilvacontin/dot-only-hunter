@@ -1,6 +1,6 @@
 {
   "name": "dot-only-hunter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Hunt down `.only`s before it's too late.",
   "author": "David da Silva <dasilvacontin@gmail.com>",
   "license": "MIT",
