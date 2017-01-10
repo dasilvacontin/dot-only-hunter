@@ -47,12 +47,18 @@ main () {
 
   echo "Hunting inside '$test_dir' for tests with \`.only\`..."
 
-  if grep -nR "\($prey\)\.only" "$test_dir"; then
+  grep -nR "\($prey\)\.only" "$test_dir"
+  rc=$?
+  if [ $rc -eq 0 ]; then
     echo "Whoops! Found \`.only\` in your tests."
     exit 1
+  elif [ $rc -gt 1 ]; then
+    printf "\nUnexpected grep error. Please report this issue! :)\nhttps://github.com/dasilvacontin/dot-only-hunter/issues/new"
+    exit 2
+  else
+    echo "All good!"
   fi
 
-  echo "All good!"
 }
 
 parse_cmd_args "$@"
