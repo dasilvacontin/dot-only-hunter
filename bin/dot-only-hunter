@@ -49,10 +49,10 @@ main () {
 
   grep -nR "\($prey\)\.only" "$test_dir"
   rc=$?
-  if [[ $rc -eq 0 ]]; then
+  if [ $rc -eq 0 ]; then
     echo "Whoops! Found \`.only\` in your tests."
     exit 1
-  elif [[ $rc -gt 1 ]] ; then
+  elif [ $rc -gt 1 ]; then
     echo "\nUnexpected grep error. Please report this issue! :)\nhttps://github.com/dasilvacontin/dot-only-hunter/issues/new"
     exit 2
   else
