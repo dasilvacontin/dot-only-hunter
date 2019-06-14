@@ -31,6 +31,7 @@ tests/test.js:describe.only('jello-eater', function () {
 Whoops! Found `.only` in your tests.
 
 $ rm tests/test.js
+$ dot-only-hunter tests
 Hunting inside 'tests' for tests with `.only`...
 All good!
 ```
