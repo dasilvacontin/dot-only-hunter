@@ -47,7 +47,7 @@ main () {
 
   echo "Hunting inside '$test_dir' for tests with \`.only\`..."
 
-  grep -nR "\($prey\)\.only" "$test_dir"
+  grep -nr "\($prey\)\.only" "$test_dir"
   rc=$?
   if [ $rc -eq 0 ]; then
     echo "Whoops! Found \`.only\` in your tests."
